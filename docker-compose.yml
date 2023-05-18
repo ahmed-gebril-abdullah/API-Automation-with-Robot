@@ -1,0 +1,72 @@
+version: '3'
+services:
+#  robot_docker:
+#    build: .
+#    command: ${command}
+#    volumes:
+#      - .:/robot-docker/results/
+
+
+
+  RUN_API_TEST_CASES:
+    image: "robotframework/docker"
+    command: robot  -i smoke  --listener robotframework_reportportal.listener  --variable RP_ENDPOINT:"http://172.30.40.199:4040/"  --variable RP_UUID:"e878592b-59d3-47c6-8b9f-b8bc87996022"  --variable RP_LAUNCH:"Ics_API_Testing_Report"  --variable RP_PROJECT:"ICS_API_Automation"    -d  results   -x  outputxunit.xml  Tests/
+    volumes:
+       - .:/robot-docker/results/
+
+  Tawuniya_GetProposal:
+    image: "robotframework/docker"
+    command: robot  --listener robotframework_reportportal.listener  --variable RP_ENDPOINT:"http://172.30.40.199:4040/"  --variable RP_UUID:"a36f7740-a78f-406c-82d9-d50a62043d74"  --variable RP_LAUNCH:"TameeniMotorMBI_Testing_Report"  --variable RP_PROJECT:"TameeniMotorMBI"    -d  results   -x  outputxunit.xml  Tests/Tawuniya_GetProposal_Quotes.robot
+    volumes:
+       - .:/robot-docker/results/
+
+  Tawuniya_CreateQuote_Quotes:
+    image: "robotframework/docker"
+    command: robot  --listener robotframework_reportportal.listener  --variable RP_ENDPOINT:"http://172.30.40.199:4040/"  --variable RP_UUID:"a36f7740-a78f-406c-82d9-d50a62043d74"  --variable RP_LAUNCH:"TameeniMotorMBI_Testing_Report"  --variable RP_PROJECT:"TameeniMotorMBI"    -d  results   -x  outputxunit.xml  Tests/Tawuniya_CreateQuote_Quotes.robot
+    volumes:
+       - .:/robot-docker/results/
+
+  Tawuniya_CreatePolicy_Quotes:
+    image: "robotframework/docker"
+    command: robot  --listener robotframework_reportportal.listener  --variable RP_ENDPOINT:"http://172.30.40.199:4040/"  --variable RP_UUID:"a36f7740-a78f-406c-82d9-d50a62043d74"  --variable RP_LAUNCH:"TameeniMotorMBI_Testing_Report"  --variable RP_PROJECT:"TameeniMotorMBI"    -d  results   -x  outputxunit.xml  Tests/ClaimSub.robot
+    volumes:
+       - .:/robot-docker/results/
+
+  Debug:
+    image: "robotframework/docker"
+    command: robot  --listener robotframework_reportportal.listener  --variable RP_ENDPOINT:"http://172.30.40.199:4040/"  --variable RP_UUID:"e878592b-59d3-47c6-8b9f-b8bc87996022"  --variable RP_LAUNCH:"Ics_API_Testing_Report"  --variable RP_PROJECT:"ICS_API_Automation"    -d  results   -x  outputxunit.xml  Debugging/
+    volumes:
+       - .:/robot-docker/results/
+
+
+
+  Pabot_Run:
+    image: "robotframework/docker"
+    command: pabot  --testlevelsplit  --listener robotframework_reportportal.listener  --variable RP_ENDPOINT:"http://172.30.40.199:4040/"  --variable RP_UUID:"e878592b-59d3-47c6-8b9f-b8bc87996022"  --variable RP_LAUNCH:"Ics_API_Testing_Report"  --variable RP_PROJECT:"ICS_API_Automation"      -d  results   -x  outputxunit.xml  Tests/
+    volumes:
+       - .:/robot-docker/results/
+       - .:/robot-docker/results/pabot_results/
+
+
+
+  RUN_API_TEST_CASES2:
+    image: "robotframework/docker"
+    command: robot     -d  results   -x  outputxunit.xml  Tests/
+
+    volumes:
+       - .:/robot-docker/results/
+
+        
+  api_tests:
+    image: "robotframework/docker"
+    command: robot   -d  results   -x  outputxunit.xml  Tests/
+
+    volumes:
+      - .:/robot-docker/results/
+
+  RUN_API_TEST_CASES_local:
+    image: "robotframework/docker"
+    command: robot  --listener robotframework_reportportal.listener  --variable RP_ENDPOINT:"http://192.168.1.6:4040/"  --variable RP_UUID:"e878592b-59d3-47c6-8b9f-b8bc87996022"  --variable RP_LAUNCH:"Ics_API_AUTOMATION(Tesing)"  --variable RP_PROJECT:"Ics_API_AUTOMATION"    -d  results   -x  outputxunit.xml  Tests/
+
+    volumes:
+      - .:/robot-docker/results/

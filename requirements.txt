@@ -1,0 +1,14 @@
+PyYAML==6.0
+robotframework-databaselibrary==1.2.4
+robotframework-requests==0.7.2
+robotframework-seleniumlibrary==5.1.3
+robotframework-jsonlibrary
+robotframework-datadriver==1.6.1
+robotframework-datadriver[XLS]
+robotframework==3.2.2
+robotframework-reportportal==5.0.4
+six==1.16.0
+reportportal-client==5.0.6
+robotframework-pabot==2.7.0
+robotframework-httplibrary==0.4.2
+robotframework-restlibrary==1.0
