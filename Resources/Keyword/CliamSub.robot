@@ -32,8 +32,7 @@ Verify API Response
     should be equal as strings    ${actualResult${actual}}    ${Expected}    ignore_case=True
 
 
-    set test variable             ${proposalNumber}         ${actualResult["getProposalsResponse"]["proposalResponse"]["proposalInfo"][0]["proposalNumber"]}
-    log   ${proposalNumber}
+
 
 #    set test variable             ${QRequestReferenceNo}         ${actualResult["RequestReferenceNo"]}
 #    log   ${QRequestReferenceNo}
