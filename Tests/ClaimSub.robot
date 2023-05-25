@@ -11,24 +11,20 @@ Library     DataDriver    ../Resources/DataDriven/ClaimSubmission.xlsx   sheet_n
 
 Resource       ../Resources/Keyword/CliamSub.robot
 Resource       ../Resources/Objects/API_Preferences.robot
-Resource       ../Resources/Keyword/Common_Keywords.robot
+#Resource       ../Resources/Keyword/Common_Keywords.robot
 
-Test Template     Tawuniya_CreatePolicy_Quotes
-
-
-
+Test Template     Create_Claim
 
 *** Keywords ***
 
-Tawuniya_CreatePolicy_Quotes
-    [Arguments]    ${URL}       ${URI}     ${body}    ${StatusCode}   ${actual}     ${Expected}    ${RandomData}
-     Create ICS session         ${URL}
-     Post Request claim          ${sessionName}   ${URI}     ${body}    ${StatusCode}   ${actual}     ${Expected}    ${RandomData}
+Create_Claim
+    [Arguments]         ${URL}       ${URI}     ${body}    ${StatusCode}   ${actual}     ${Expected}    ${RandomData}
+     Create API session        ${URL}
+     Post Request claim        ${sessionName}     ${URI}     ${body}    ${StatusCode}   ${actual}     ${Expected}    ${RandomData}
 
 
 
 *** Test Cases ***
-
 ${Testcase id} ${Type} ${Desc}
 
 

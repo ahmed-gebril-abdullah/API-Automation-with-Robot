@@ -12,14 +12,20 @@ Library    JSONLibrary
 
 *** Keywords ***
 
-
 Create API session
-    [Arguments]          ${Base_Url}   ${auth_username}    ${auth_password}
+    [Arguments]          ${Base_Url}
     ${randomNumber}      generate random string          4    [NUMBERS]
     ${sessionName}       Catenate    session_${randomNumber}
     set global variable     ${sessionName}
-    ${auth}   create list   ${auth_username}   ${auth_password}
-    create session           ${sessionName}     ${Base_Url}       auth=${auth}       timeout=30     disable_warnings=1
+    create session           ${sessionName}     ${Base_Url}              timeout=30     disable_warnings=1
+
+#Create API session
+    #[Arguments]          ${Base_Url}   ${auth_username}    ${auth_password}
+    #${randomNumber}      generate random string          4    [NUMBERS]
+    #${sessionName}       Catenate    session_${randomNumber}
+   # set global variable     ${sessionName}
+  #  ${auth}   create list   ${auth_username}   ${auth_password}
+ #   create session           ${sessionName}     ${Base_Url}       auth=${auth}       timeout=30     disable_warnings=1
 
 
 Post Request and check response
