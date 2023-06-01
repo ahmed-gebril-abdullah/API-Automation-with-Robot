@@ -20,12 +20,12 @@ Create API session
     create session           ${sessionName}     ${Base_Url}              timeout=30     disable_warnings=1
 
 #Create API session
-    #[Arguments]          ${Base_Url}   ${auth_username}    ${auth_password}
-    #${randomNumber}      generate random string          4    [NUMBERS]
-    #${sessionName}       Catenate    session_${randomNumber}
-   # set global variable     ${sessionName}
-  #  ${auth}   create list   ${auth_username}   ${auth_password}
- #   create session           ${sessionName}     ${Base_Url}       auth=${auth}       timeout=30     disable_warnings=1
+#    [Arguments]          ${Base_Url}   ${auth_username}    ${auth_password}
+#    ${randomNumber}      generate random string          4    [NUMBERS]
+#    ${sessionName}       Catenate    session_${randomNumber}
+#    set global variable     ${sessionName}
+#    ${auth}   create list   ${auth_username}   ${auth_password}
+#    create session           ${sessionName}     ${Base_Url}       auth=${auth}       timeout=30     disable_warnings=1
 
 
 Post Request and check response
@@ -73,3 +73,12 @@ Post Request using data Driven Structure
 #    ${actualResult}          to json        ${resp.content}
 #    set test variable       ${actualResult}
 #
+
+Put Request using data Driven Structure
+    [Documentation]    Put request with DataDriven structure
+    [Arguments]     ${sessionName}     ${URI}     ${data}    ${statuscode}
+    ${headers}=  Create Dictionary   Content-Type=application/json
+    ${resp}       Put request       ${sessionName}          ${URI}      ${data}     headers=${headers}     timeout=10
+    status should be                 ${statuscode}           ${resp}
+    ${actualResult}          to json        ${resp.content}
+    set test variable       ${actualResult}

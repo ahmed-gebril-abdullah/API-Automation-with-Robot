@@ -24,6 +24,11 @@ Post Request claim
 #     Post Request using data Driven Structure        ${sessionName}    ${Quote_Url}      ${data}      ${Quote_StatusCode}
 #     Verify API Response                             ${Quote_actual}      ${Quote_Expected}
 
+Put Request claim
+    [Arguments]       ${sessionName}   ${Url}     ${body}    ${StatusCode}   ${actual}     ${Expected}    ${RandomData}
+#     Update json unique values                       ${Quote_body}     ${Quote_RandomData}
+     Put Request using data Driven Structure        ${sessionName}    ${Url}      ${body}     ${StatusCode}
+     Verify API Response                             ${actual}      ${Expected}
 
 
 Verify API Response
