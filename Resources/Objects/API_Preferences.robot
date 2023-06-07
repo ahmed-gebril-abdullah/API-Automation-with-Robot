@@ -28,13 +28,13 @@ Create API session
 #    create session           ${sessionName}     ${Base_Url}       auth=${auth}       timeout=30     disable_warnings=1
 
 
-Post Request and check response
-    [Arguments]    ${sessionName}  ${SecondUrl}       ${body}      ${statuscode}
-    ${header}=  Create Dictionary   Content-Type=application/json
-    ${resp}     Post request           ${sessionName}         ${SecondUrl}    ${body}    headers=${header}
-    set test variable   ${actualResult}      ${resp.json()}
-    should be equal as strings             ${resp.status_code}         ${statuscode}
-    set test variable     ${actualResult}
+#Post Request and check response
+#    [Arguments]    ${sessionName}  ${SecondUrl}       ${body}      ${statuscode}
+#    ${header}=  Create Dictionary   Content-Type=application/json
+#    ${resp}     Post request           ${sessionName}         ${SecondUrl}    ${body}    headers=${header}
+#    set test variable   ${actualResult}      ${resp.json()}
+#    should be equal as strings             ${resp.status_code}         ${statuscode}
+#    set test variable     ${actualResult}
 
 Creat API session using Data Driven
     [Arguments]    ${Base_Url}
@@ -78,7 +78,7 @@ Put Request using data Driven Structure
     [Documentation]    Put request with DataDriven structure
     [Arguments]     ${sessionName}     ${URI}     ${data}    ${statuscode}
     ${headers}=  Create Dictionary   Content-Type=application/json
-    ${resp}       Put request       ${sessionName}          ${URI}      ${data}     headers=${headers}     timeout=10
+    ${resp}       put request       ${sessionName}          ${URI}      ${data}     headers=${headers}     timeout=10
     status should be                 ${statuscode}           ${resp}
     ${actualResult}          to json        ${resp.content}
     set test variable       ${actualResult}
