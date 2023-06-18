@@ -5,6 +5,6 @@ services:
 
   RUN_API_TEST_CASES:
     image: "robotframework/docker"
-    command: robot  -i smoke  --listener robotframework_reportportal.listener  --variable RP_ENDPOINT:"http://172.30.40.199:4040/"  --variable RP_UUID:"a36f7740-a78f-406c-82d9-d50a62043d74"  --variable RP_LAUNCH:"Claims_API_Testing_Report"  --variable RP_PROJECT:"Claims_backend_api"    -d  results   -x  outputxunit.xml  Tests/
+    command: robot  --listener robotframework_reportportal.listener  --variable RP_ENDPOINT:"http://172.30.40.199:4040/"  --variable RP_UUID:"a36f7740-a78f-406c-82d9-d50a62043d74"  --variable RP_LAUNCH:"Claims_API_Testing_Report"  --variable RP_PROJECT:"Claims_backend_api"    -d  results   -x  outputxunit.xml  Tests/
     volumes:
        - .:/robot-docker/results/
