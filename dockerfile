@@ -3,6 +3,7 @@ LABEL version="latest" maintainer="Mohamed Yusuf <>"
 RUN mkdir /robot-docker
 WORKDIR /robot-docker
 COPY . /robot-docker/
-RUN pip install -r requirements.txt
+
+RUN pip install -r requirements.txt --proxy=http://rasan:rasan@10.142.6.110:31280
 RUN pip -V
 RUN pip freeze
