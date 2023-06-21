@@ -13,3 +13,7 @@ Disconnect_DB
    disconnect from database
 
 
+*** Test Cases ***
+tesr1
+    Connect_DB
+    Disconnect_DB

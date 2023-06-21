@@ -11,4 +11,3 @@ Get_CoverPlan_ref_By_QouteRef
     log    ${CoverPlan_ref[0][0]}
     set test variable    ${coverplan}     ${CoverPlan_ref[0][0]}
     Disconnect_DB
-

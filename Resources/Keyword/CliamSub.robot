@@ -6,6 +6,7 @@ Library     String
 Library    JSONLibrary
 Library     DateTime
 Resource     ../Objects/API_Preferences.robot
+
 #Resource       ../Keyword/Common_Keywords.robot
 *** Variables ***
 
@@ -17,6 +18,8 @@ Post Request claim
 #     Update json unique values                       ${Quote_body}     ${Quote_RandomData}
      Post Request using data Driven Structure        ${sessionName}    ${Url}      ${body}     ${StatusCode}
      Verify API Response                             ${actual}      ${Expected}
+     verify api respnse when request is valid
+
 
 #Post Request claim
 #    [Arguments]       ${sessionName}   ${Quote_Url}     ${Quote_body}    ${Quote_StatusCode}   ${Quote_actual}     ${Quote_Expected}    ${Quote_RandomData}
@@ -35,6 +38,15 @@ Verify API Response
     [Documentation]    veriy actual resutls
     [Arguments]           ${actual}      ${Expected}
     should be equal as strings    ${actualResult${actual}}    ${Expected}    ignore_case=True
+    log to console    ${actual}     ["model"]["data"]["data"]["claimNumber"]
+
+
+Verify API Respnse when request is valid
+    [Documentation]    veriy actual resutls
+    [Arguments]           ${actual}      ${Expected}
+    should be equal as strings    ${actualResult${actual}}    ${Expected}    ignore_case=True
+    set test variable    ${claimnumber}    ${}
+    log     ${claimnumber}
 
 
 

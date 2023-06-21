@@ -1,7 +1,7 @@
-Base_Url: https://mmpuat.gettameeni.com/backend/V1
-DBName: mmp
-DBUser: Sa
-DBPass: rasan@123
-DBHost: 172.30.20.184
+Base_Url:
+DBName: ClaimDB_QC
+DBUser: abdallah.tarek
+DBPass: T2d$2o7@AnA
+DBHost: 172.30.40.122
 DBPort: 1433
-AG_Base_Url: http://172.30.20.184/MMPAggregator/MMPAggregator
+AG_Base_Url:
