@@ -15,7 +15,7 @@ Library    JSONLibrary
 Create API session
     [Arguments]          ${Base_Url}
     ${randomNumber}      generate random string          4    [NUMBERS]
-    ${sessionName}       Catenate    session_${randomNumber}
+    ${sessionName}       Catenate    session_${randomNumber}            disable_warnings=1
     set global variable     ${sessionName}
     create session           ${sessionName}     ${Base_Url}              timeout=30     disable_warnings=1
 
@@ -28,20 +28,20 @@ Create API session
 #    create session           ${sessionName}     ${Base_Url}       auth=${auth}       timeout=30     disable_warnings=1
 
 
-#Post Request and check response
-#    [Arguments]    ${sessionName}  ${SecondUrl}       ${body}      ${statuscode}
-#    ${header}=  Create Dictionary   Content-Type=application/json
-#    ${resp}     Post request           ${sessionName}         ${SecondUrl}    ${body}    headers=${header}
-#    set test variable   ${actualResult}      ${resp.json()}
-#    should be equal as strings             ${resp.status_code}         ${statuscode}
-#    set test variable     ${actualResult}
+Post Request and check response
+    [Arguments]    ${sessionName}  ${SecondUrl}       ${body}      ${statuscode}
+    ${header}=  Create Dictionary   Content-Type=application/json
+    ${resp}     Post request           ${sessionName}         ${SecondUrl}    ${body}    headers=${header}
+    set test variable   ${actualResult}      ${resp.json()}
+    should be equal as strings             ${resp.status_code}         ${statuscode}
+    set test variable     ${actualResult}
 
 Creat API session using Data Driven
     [Arguments]    ${Base_Url}
     ${randomNumber}      generate random string          4    [NUMBERS]
     ${sessionName}       Catenate    session_${randomNumber}
     set global variable      ${sessionName}
-    create session      ${sessionName}       ${Base_Url}          timeout=30    max_retries=2      disable_warnings=1
+    create session      ${sessionName}       ${Base_Url}        disable_warnings=1  timeout=30    max_retries=2
     [Return]      ${sessionName}
 
 
@@ -64,6 +64,16 @@ Post Request using data Driven Structure
     ${actualResult}          to json        ${resp.content}
     set test variable       ${actualResult}
 
+
+Get Request using data Driven Structure
+    [Documentation]    Get request with DataDriven structure
+    [Arguments]     ${sessionName}     ${URI}       ${statuscode}
+    ${headers}=  Create Dictionary   Content-Type=application/json
+    ${resp}       get request       ${sessionName}          ${URI}      headers=${headers}     timeout=10
+    status should be                 ${statuscode}           ${resp}
+    ${actualResult}          to json        ${resp.content}
+    set test variable       ${actualResult}
+
 #Post Request using data Driven Structure
 #    [Documentation]    Post request with DataDriven structure
 #    [Arguments]     ${sessionName}     ${URI}     ${data}    ${statuscode}
@@ -78,7 +88,9 @@ Put Request using data Driven Structure
     [Documentation]    Put request with DataDriven structure
     [Arguments]     ${sessionName}     ${URI}     ${data}    ${statuscode}
     ${headers}=  Create Dictionary   Content-Type=application/json
-    ${resp}       put request       ${sessionName}          ${URI}      ${data}     headers=${headers}     timeout=10
+    ${resp}       Put request       ${sessionName}          ${URI}      ${data}     headers=${headers}     timeout=10
     status should be                 ${statuscode}           ${resp}
     ${actualResult}          to json        ${resp.content}
     set test variable       ${actualResult}
+
+
