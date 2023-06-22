@@ -36,7 +36,10 @@ Verify API Response
     [Arguments]           ${actual}      ${Expected}
     should be equal as strings    ${actualResult${actual}}    ${Expected}    ignore_case=True
 
-
+Verify API Response
+    [Documentation]    veriy actual resutls
+    [Arguments]           ${actual}      ${Expected}
+    should be equal as strings      ${actualResult${actual}}     ${Expected}    ignore_case=True
 
 
 #    set test variable             ${QRequestReferenceNo}         ${actualResult["RequestReferenceNo"]}
