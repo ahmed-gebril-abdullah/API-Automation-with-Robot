@@ -6,25 +6,18 @@ Library     String
 Library    JSONLibrary
 Library     DateTime
 Resource     ../Objects/API_Preferences.robot
-Resource     ../Resources/Database/DataBaseConnection.robot
-
 #Resource       ../Keyword/Common_Keywords.robot
 *** Variables ***
 
 *** Keywords ***
 
+
 Post Request claim
-    [Arguments]        ${sessionName}   ${Url}     ${body}    ${StatusCode}   ${actual}     ${Expected}    ${RandomData}
+    [Arguments]       ${sessionName}   ${Url}     ${body}    ${StatusCode}   ${actual}     ${Expected}    ${RandomData}
 #     Update json unique values                       ${Quote_body}     ${Quote_RandomData}
      Post Request using data Driven Structure        ${sessionName}    ${Url}      ${body}     ${StatusCode}
      Verify API Response                             ${actual}      ${Expected}
 
-
-Get Request claim
-    [Arguments]        ${sessionName}   ${Url}       ${StatusCode}   ${actual}     ${Expected}    ${RandomData}
-#     Update json unique values                       ${Quote_body}     ${Quote_RandomData}
-     Get Request using data Driven Structure        ${sessionName}    ${Url}        ${StatusCode}
-     Verify API Response                              ${actual}      ${Expected}
 #Post Request claim
 #    [Arguments]       ${sessionName}   ${Quote_Url}     ${Quote_body}    ${Quote_StatusCode}   ${Quote_actual}     ${Quote_Expected}    ${Quote_RandomData}
 #     Update json unique values                       ${Quote_body}     ${Quote_RandomData}
@@ -38,16 +31,13 @@ Put Request claim
      Verify API Response                             ${actual}      ${Expected}
 
 
- Verify API Response
+Verify API Response
     [Documentation]    veriy actual resutls
     [Arguments]           ${actual}      ${Expected}
     should be equal as strings    ${actualResult${actual}}    ${Expected}    ignore_case=True
 
 
- Verify DB Response
-    [Documentation]    veriy actual resutls
-    [Arguments]           ${actual}      ${id}
-    should be equal as strings    ${actualResult${actual}}    ${id}    ignore_case=True
+
 
 #    set test variable             ${QRequestReferenceNo}         ${actualResult["RequestReferenceNo"]}
 #    log   ${QRequestReferenceNo}
