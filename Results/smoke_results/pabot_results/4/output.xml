@@ -1,0 +1,2456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.3 on win32)" generated="20231130 16:37:02.555" rpa="false">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="GetAuthCode" source="C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\GetAuthCode.robot">
+<test id="s1-s1-t1" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "2091266748",
+    "phoneNumber": "0578888888",
+    "name": "ahmed gebril",
+    "lessorId": "arb",
+    "actionId": 1,
+    "email": "agebril@gmail.com",
+    "policyNumber": "231654888",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": 1
+}</arg>
+<arg>200</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:04.608" level="INFO">${randomNumber} = 1464</msg>
+<status status="PASS" starttime="20231130 16:37:04.607" endtime="20231130 16:37:04.608"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:04.608" level="INFO">${sessionName} = session_1464</msg>
+<status status="PASS" starttime="20231130 16:37:04.608" endtime="20231130 16:37:04.608"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:04.609" level="INFO">${sessionName} = session_1464</msg>
+<status status="PASS" starttime="20231130 16:37:04.609" endtime="20231130 16:37:04.609"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:04.610" level="INFO">Creating Session using : alias=session_1464, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:04.609" endtime="20231130 16:37:04.610"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:04.607" endtime="20231130 16:37:04.610"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:04.612" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:04.612" endtime="20231130 16:37:04.612"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:04.612" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:05.203" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '262'} 
+ body=b'{\n    "userId": "2091266748",\n    "phoneNumber": "0578888888",\n    "name": "ahmed gebril",\n    "lessorId": "arb",\n    "actionId": 1,\n    "email": "agebril@gmail.com",\n    "policyNumber": "231654888",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": 1\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:05.204" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:35 GMT', 'Content-Type': 'text/plain; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body=http://claims-qc.rasan.co/app/claim/create?auth_code=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZCI6IjEiLCJJc0FkbWluIjoidHJ1ZSIsImVtYWlsIjoiYWdlYnJpbEBnbWFpbC5jb20iLCJQb2xpY3lOdW1iZXIiOiIyMzE2NTQ4ODgiLCJJbnN1cmFuY2VDb21wYW55SWQiOiIxIiwiTGVzc29ySWQiOiJhcmIiLCJDbGFpbU5vIjoiQ0lELTk4Nzc3My0yMzgiLCJBY3Rpb25JZCI6IjEiLCJuYmYiOjE3MDEzNTUxMTUsImV4cCI6MTcwMTM1NTQxNSwiaWF0IjoxNzAxMzU1MTE1fQ.Ldr6yiYMJaZO_Zc5M4Zi_mOuMsOUhOVVfOm29qklgQg 
+ </msg>
+<msg timestamp="20231130 16:37:05.204" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:04.612" endtime="20231130 16:37:05.204"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:05.204" endtime="20231130 16:37:05.205"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:05.206" level="INFO">${actualResult} = http://claims-qc.rasan.co/app/claim/create?auth_code=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZC...</msg>
+<status status="PASS" starttime="20231130 16:37:05.205" endtime="20231130 16:37:05.206"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:05.207" level="INFO">${actualResult} = http://claims-qc.rasan.co/app/claim/create?auth_code=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZC...</msg>
+<status status="PASS" starttime="20231130 16:37:05.206" endtime="20231130 16:37:05.207"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:05.207" level="INFO">${AuthCode} = yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZCI6IjEiLCJJc0FkbWluIjoidHJ1ZSIsImVtYWlsIjoiYWdlYnJpbEBn...</msg>
+<status status="PASS" starttime="20231130 16:37:05.207" endtime="20231130 16:37:05.209"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:05.210" level="INFO">${AuthCode} = yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZCI6IjEiLCJJc0FkbWluIjoidHJ1ZSIsImVtYWlsIjoiYWdlYnJpbEBn...</msg>
+<status status="PASS" starttime="20231130 16:37:05.209" endtime="20231130 16:37:05.210"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:04.611" endtime="20231130 16:37:05.210"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:04.610" endtime="20231130 16:37:05.210"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:04.605" endtime="20231130 16:37:05.211"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:04.604" endtime="20231130 16:37:05.211" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "",
+    "phoneNumber": "0578888888",
+    "name": "ahmed gebril",
+    "lessorId": "arb",
+    "actionId": 1,
+    "email": "agebril@gmail.com",
+    "policyNumber": "231654888",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": 1
+}</arg>
+<arg>400</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:05.217" level="INFO">${randomNumber} = 6252</msg>
+<status status="PASS" starttime="20231130 16:37:05.216" endtime="20231130 16:37:05.217"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:05.217" level="INFO">${sessionName} = session_6252</msg>
+<status status="PASS" starttime="20231130 16:37:05.217" endtime="20231130 16:37:05.217"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:05.218" level="INFO">${sessionName} = session_6252</msg>
+<status status="PASS" starttime="20231130 16:37:05.218" endtime="20231130 16:37:05.218"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:05.219" level="INFO">Creating Session using : alias=session_6252, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:05.218" endtime="20231130 16:37:05.219"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:05.215" endtime="20231130 16:37:05.219"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:05.223" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:05.222" endtime="20231130 16:37:05.223"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:05.223" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:05.794" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '252'} 
+ body=b'{\n    "userId": "",\n    "phoneNumber": "0578888888",\n    "name": "ahmed gebril",\n    "lessorId": "arb",\n    "actionId": 1,\n    "email": "agebril@gmail.com",\n    "policyNumber": "231654888",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": 1\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:05.795" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=400, reason=Bad Request 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:35 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body={"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":115,"errorMessage":"EnterLesseeNationalNumber"},"data":null}}} 
+ </msg>
+<msg timestamp="20231130 16:37:05.795" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:05.223" endtime="20231130 16:37:05.795"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:05.796" endtime="20231130 16:37:05.797"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:05.799" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":115,"errorMessage":"EnterLesseeNationalNumber"},"...</msg>
+<status status="PASS" starttime="20231130 16:37:05.797" endtime="20231130 16:37:05.799"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:05.800" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":115,"errorMessage":"EnterLesseeNationalNumber"},"...</msg>
+<status status="PASS" starttime="20231130 16:37:05.799" endtime="20231130 16:37:05.800"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:05.802" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":115,"errorMessage":"EnterLesseeNationalNumber"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:05.801" endtime="20231130 16:37:05.802"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:05.803" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":115,"errorMessage":"EnterLesseeNationalNumber"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:05.802" endtime="20231130 16:37:05.803"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:05.221" endtime="20231130 16:37:05.803"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:05.220" endtime="20231130 16:37:05.803"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:05.214" endtime="20231130 16:37:05.803"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:05.212" endtime="20231130 16:37:05.804" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "2091266748",
+    "phoneNumber": "",
+    "name": "ahmed gebril",
+    "lessorId": "arb",
+    "actionId": 1,
+    "email": "agebril@gmail.com",
+    "policyNumber": "",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": 1
+}</arg>
+<arg>400</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:05.811" level="INFO">${randomNumber} = 0855</msg>
+<status status="PASS" starttime="20231130 16:37:05.810" endtime="20231130 16:37:05.811"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:05.812" level="INFO">${sessionName} = session_0855</msg>
+<status status="PASS" starttime="20231130 16:37:05.811" endtime="20231130 16:37:05.812"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:05.813" level="INFO">${sessionName} = session_0855</msg>
+<status status="PASS" starttime="20231130 16:37:05.812" endtime="20231130 16:37:05.813"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:05.814" level="INFO">Creating Session using : alias=session_0855, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:05.813" endtime="20231130 16:37:05.815"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:05.809" endtime="20231130 16:37:05.815"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:05.819" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:05.818" endtime="20231130 16:37:05.819"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:05.820" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:06.447" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '243'} 
+ body=b'{\n    "userId": "2091266748",\n    "phoneNumber": "",\n    "name": "ahmed gebril",\n    "lessorId": "arb",\n    "actionId": 1,\n    "email": "agebril@gmail.com",\n    "policyNumber": "",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": 1\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:06.447" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=400, reason=Bad Request 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:36 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body={"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":286,"errorMessage":"EnterPhoneNumber"},"data":null}}} 
+ </msg>
+<msg timestamp="20231130 16:37:06.448" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:05.819" endtime="20231130 16:37:06.448"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:06.448" endtime="20231130 16:37:06.449"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:06.450" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":286,"errorMessage":"EnterPhoneNumber"},"data":nul...</msg>
+<status status="PASS" starttime="20231130 16:37:06.449" endtime="20231130 16:37:06.450"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:06.451" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":286,"errorMessage":"EnterPhoneNumber"},"data":nul...</msg>
+<status status="PASS" starttime="20231130 16:37:06.450" endtime="20231130 16:37:06.451"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:06.451" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":286,"errorMessage":"EnterPhoneNumber"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:06.451" endtime="20231130 16:37:06.451"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:06.452" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":286,"errorMessage":"EnterPhoneNumber"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:06.451" endtime="20231130 16:37:06.452"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:05.817" endtime="20231130 16:37:06.452"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:05.815" endtime="20231130 16:37:06.452"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:05.808" endtime="20231130 16:37:06.452"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:05.806" endtime="20231130 16:37:06.452" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "2091266748",
+    "phoneNumber": "0578888888",
+    "name": "%$#$@$",
+    "lessorId": "arb",
+    "actionId": 1,
+    "email": "agebril@gmail.com",
+    "policyNumber": "231654888",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": 1
+}</arg>
+<arg>400</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:06.456" level="INFO">${randomNumber} = 9763</msg>
+<status status="PASS" starttime="20231130 16:37:06.455" endtime="20231130 16:37:06.456"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:06.456" level="INFO">${sessionName} = session_9763</msg>
+<status status="PASS" starttime="20231130 16:37:06.456" endtime="20231130 16:37:06.456"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:06.456" level="INFO">${sessionName} = session_9763</msg>
+<status status="PASS" starttime="20231130 16:37:06.456" endtime="20231130 16:37:06.456"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:06.457" level="INFO">Creating Session using : alias=session_9763, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:06.457" endtime="20231130 16:37:06.457"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:06.455" endtime="20231130 16:37:06.457"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:06.459" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:06.458" endtime="20231130 16:37:06.459"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:06.459" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:07.029" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '256'} 
+ body=b'{\n    "userId": "2091266748",\n    "phoneNumber": "0578888888",\n    "name": "%$#$@$",\n    "lessorId": "arb",\n    "actionId": 1,\n    "email": "agebril@gmail.com",\n    "policyNumber": "231654888",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": 1\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:07.029" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=400, reason=Bad Request 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:37 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body={"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":296,"errorMessage":"NameIsInValidFormat"},"data":null}}} 
+ </msg>
+<msg timestamp="20231130 16:37:07.030" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:06.459" endtime="20231130 16:37:07.030"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:07.030" endtime="20231130 16:37:07.031"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:07.032" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":296,"errorMessage":"NameIsInValidFormat"},"data":...</msg>
+<status status="PASS" starttime="20231130 16:37:07.031" endtime="20231130 16:37:07.032"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:07.033" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":296,"errorMessage":"NameIsInValidFormat"},"data":...</msg>
+<status status="PASS" starttime="20231130 16:37:07.033" endtime="20231130 16:37:07.033"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:07.034" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":296,"errorMessage":"NameIsInValidFormat"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:07.033" endtime="20231130 16:37:07.034"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:07.035" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":296,"errorMessage":"NameIsInValidFormat"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:07.035" endtime="20231130 16:37:07.035"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:06.458" endtime="20231130 16:37:07.035"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:06.457" endtime="20231130 16:37:07.036"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:06.454" endtime="20231130 16:37:07.036"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:06.453" endtime="20231130 16:37:07.036" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "2091266748",
+    "phoneNumber": "0578888888",
+    "name": "",
+    "lessorId": "arb",
+    "actionId": 1,
+    "email": "agebril@gmail.com",
+    "policyNumber": "231654888",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": 1
+}</arg>
+<arg>400</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:07.043" level="INFO">${randomNumber} = 8836</msg>
+<status status="PASS" starttime="20231130 16:37:07.042" endtime="20231130 16:37:07.043"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:07.043" level="INFO">${sessionName} = session_8836</msg>
+<status status="PASS" starttime="20231130 16:37:07.043" endtime="20231130 16:37:07.043"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:07.044" level="INFO">${sessionName} = session_8836</msg>
+<status status="PASS" starttime="20231130 16:37:07.044" endtime="20231130 16:37:07.044"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:07.045" level="INFO">Creating Session using : alias=session_8836, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:07.045" endtime="20231130 16:37:07.046"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:07.040" endtime="20231130 16:37:07.046"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:07.050" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:07.050" endtime="20231130 16:37:07.050"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:07.051" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:07.644" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '250'} 
+ body=b'{\n    "userId": "2091266748",\n    "phoneNumber": "0578888888",\n    "name": "",\n    "lessorId": "arb",\n    "actionId": 1,\n    "email": "agebril@gmail.com",\n    "policyNumber": "231654888",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": 1\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:07.644" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=400, reason=Bad Request 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:37 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body={"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":290,"errorMessage":"EnterName"},"data":null}}} 
+ </msg>
+<msg timestamp="20231130 16:37:07.644" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:07.050" endtime="20231130 16:37:07.644"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:07.645" endtime="20231130 16:37:07.647"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:07.648" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":290,"errorMessage":"EnterName"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:07.647" endtime="20231130 16:37:07.648"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:07.650" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":290,"errorMessage":"EnterName"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:07.649" endtime="20231130 16:37:07.650"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:07.651" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":290,"errorMessage":"EnterName"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:07.650" endtime="20231130 16:37:07.651"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:07.653" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":290,"errorMessage":"EnterName"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:07.652" endtime="20231130 16:37:07.653"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:07.048" endtime="20231130 16:37:07.653"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:07.046" endtime="20231130 16:37:07.653"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:07.039" endtime="20231130 16:37:07.654"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:07.037" endtime="20231130 16:37:07.654" critical="yes"></status>
+</test>
+<test id="s1-s1-t6" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "2091266748",
+    "phoneNumber": "05788888889",
+    "name": "ahmed gebril",
+    "lessorId": "arb",
+    "actionId": 1,
+    "email": "agebril@gmail.com",
+    "policyNumber": "231654888",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": 1
+}</arg>
+<arg>400</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:07.662" level="INFO">${randomNumber} = 8971</msg>
+<status status="PASS" starttime="20231130 16:37:07.661" endtime="20231130 16:37:07.662"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:07.663" level="INFO">${sessionName} = session_8971</msg>
+<status status="PASS" starttime="20231130 16:37:07.662" endtime="20231130 16:37:07.663"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:07.664" level="INFO">${sessionName} = session_8971</msg>
+<status status="PASS" starttime="20231130 16:37:07.663" endtime="20231130 16:37:07.664"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:07.665" level="INFO">Creating Session using : alias=session_8971, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:07.664" endtime="20231130 16:37:07.665"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:07.660" endtime="20231130 16:37:07.665"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:07.668" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:07.667" endtime="20231130 16:37:07.668"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:07.669" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:08.240" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '263'} 
+ body=b'{\n    "userId": "2091266748",\n    "phoneNumber": "05788888889",\n    "name": "ahmed gebril",\n    "lessorId": "arb",\n    "actionId": 1,\n    "email": "agebril@gmail.com",\n    "policyNumber": "231654888",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": 1\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:08.240" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=400, reason=Bad Request 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:38 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body={"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":287,"errorMessage":"PhoneNumberIsInCoreectFormat"},"data":null}}} 
+ </msg>
+<msg timestamp="20231130 16:37:08.241" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:07.668" endtime="20231130 16:37:08.241"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:08.242" endtime="20231130 16:37:08.243"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:08.244" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":287,"errorMessage":"PhoneNumberIsInCoreectFormat"...</msg>
+<status status="PASS" starttime="20231130 16:37:08.243" endtime="20231130 16:37:08.244"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:08.244" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":287,"errorMessage":"PhoneNumberIsInCoreectFormat"...</msg>
+<status status="PASS" starttime="20231130 16:37:08.244" endtime="20231130 16:37:08.245"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:08.245" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":287,"errorMessage":"PhoneNumberIsInCoreectFormat"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:08.245" endtime="20231130 16:37:08.245"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:08.246" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":287,"errorMessage":"PhoneNumberIsInCoreectFormat"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:08.246" endtime="20231130 16:37:08.246"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:07.667" endtime="20231130 16:37:08.247"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:07.666" endtime="20231130 16:37:08.247"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:07.659" endtime="20231130 16:37:08.247"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:07.657" endtime="20231130 16:37:08.247" critical="yes"></status>
+</test>
+<test id="s1-s1-t7" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "2091266748",
+    "phoneNumber": "",
+    "name":" ahmed gebril",
+    "lessorId": "arb",
+    "actionId": 1,
+    "email": "agebril@gmail.com",
+    "policyNumber": "231654888",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": 1
+}</arg>
+<arg>400</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:08.252" level="INFO">${randomNumber} = 2986</msg>
+<status status="PASS" starttime="20231130 16:37:08.252" endtime="20231130 16:37:08.252"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:08.253" level="INFO">${sessionName} = session_2986</msg>
+<status status="PASS" starttime="20231130 16:37:08.253" endtime="20231130 16:37:08.253"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:08.254" level="INFO">${sessionName} = session_2986</msg>
+<status status="PASS" starttime="20231130 16:37:08.253" endtime="20231130 16:37:08.254"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:08.255" level="INFO">Creating Session using : alias=session_2986, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:08.254" endtime="20231130 16:37:08.255"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:08.251" endtime="20231130 16:37:08.255"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:08.257" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:08.257" endtime="20231130 16:37:08.257"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:08.258" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:08.723" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '252'} 
+ body=b'{\n    "userId": "2091266748",\n    "phoneNumber": "",\n    "name":" ahmed gebril",\n    "lessorId": "arb",\n    "actionId": 1,\n    "email": "agebril@gmail.com",\n    "policyNumber": "231654888",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": 1\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:08.723" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=400, reason=Bad Request 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:38 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body={"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":286,"errorMessage":"EnterPhoneNumber"},"data":null}}} 
+ </msg>
+<msg timestamp="20231130 16:37:08.724" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:08.258" endtime="20231130 16:37:08.724"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:08.724" endtime="20231130 16:37:08.725"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:08.726" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":286,"errorMessage":"EnterPhoneNumber"},"data":nul...</msg>
+<status status="PASS" starttime="20231130 16:37:08.725" endtime="20231130 16:37:08.726"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:08.726" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":286,"errorMessage":"EnterPhoneNumber"},"data":nul...</msg>
+<status status="PASS" starttime="20231130 16:37:08.726" endtime="20231130 16:37:08.727"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:08.727" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":286,"errorMessage":"EnterPhoneNumber"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:08.727" endtime="20231130 16:37:08.727"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:08.728" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":286,"errorMessage":"EnterPhoneNumber"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:08.728" endtime="20231130 16:37:08.728"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:08.256" endtime="20231130 16:37:08.728"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:08.255" endtime="20231130 16:37:08.729"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:08.250" endtime="20231130 16:37:08.729"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:08.249" endtime="20231130 16:37:08.729" critical="yes"></status>
+</test>
+<test id="s1-s1-t8" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "%$#@####",
+    "phoneNumber": "0578888888",
+    "name":"ahmed gebril",
+    "lessorId": "arb",
+    "actionId": 1,
+    "email": "agebril@gmail.com",
+    "policyNumber": "231654888",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": 1
+}</arg>
+<arg>400</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:08.734" level="INFO">${randomNumber} = 2857</msg>
+<status status="PASS" starttime="20231130 16:37:08.734" endtime="20231130 16:37:08.734"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:08.735" level="INFO">${sessionName} = session_2857</msg>
+<status status="PASS" starttime="20231130 16:37:08.735" endtime="20231130 16:37:08.735"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:08.736" level="INFO">${sessionName} = session_2857</msg>
+<status status="PASS" starttime="20231130 16:37:08.735" endtime="20231130 16:37:08.736"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:08.737" level="INFO">Creating Session using : alias=session_2857, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:08.736" endtime="20231130 16:37:08.737"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:08.732" endtime="20231130 16:37:08.738"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:08.740" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:08.740" endtime="20231130 16:37:08.740"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:08.740" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:09.317" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '259'} 
+ body=b'{\n    "userId": "%$#@####",\n    "phoneNumber": "0578888888",\n    "name":"ahmed gebril",\n    "lessorId": "arb",\n    "actionId": 1,\n    "email": "agebril@gmail.com",\n    "policyNumber": "231654888",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": 1\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:09.317" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=400, reason=Bad Request 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:39 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body={"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":116,"errorMessage":"LesseeNationalNumberIsInValidFormat"},"data":null}}} 
+ </msg>
+<msg timestamp="20231130 16:37:09.318" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:08.740" endtime="20231130 16:37:09.318"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:09.318" endtime="20231130 16:37:09.318"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:09.319" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":116,"errorMessage":"LesseeNationalNumberIsInValid...</msg>
+<status status="PASS" starttime="20231130 16:37:09.319" endtime="20231130 16:37:09.319"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:09.320" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":116,"errorMessage":"LesseeNationalNumberIsInValid...</msg>
+<status status="PASS" starttime="20231130 16:37:09.319" endtime="20231130 16:37:09.320"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:09.320" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":116,"errorMessage":"LesseeNationalNumberIsInValidFormat"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:09.320" endtime="20231130 16:37:09.320"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:09.320" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":116,"errorMessage":"LesseeNationalNumberIsInValidFormat"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:09.320" endtime="20231130 16:37:09.321"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:08.739" endtime="20231130 16:37:09.321"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:08.738" endtime="20231130 16:37:09.321"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:08.732" endtime="20231130 16:37:09.321"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:08.730" endtime="20231130 16:37:09.321" critical="yes"></status>
+</test>
+<test id="s1-s1-t9" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "2091266748",
+    "phoneNumber": "0178888888",
+    "name": "ahmed gebril",
+    "lessorId": "arb",
+    "actionId": 1,
+    "email": "agebril@gmail.com",
+    "policyNumber": "231654888",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": 1
+}</arg>
+<arg>400</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:09.324" level="INFO">${randomNumber} = 8165</msg>
+<status status="PASS" starttime="20231130 16:37:09.323" endtime="20231130 16:37:09.324"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:09.324" level="INFO">${sessionName} = session_8165</msg>
+<status status="PASS" starttime="20231130 16:37:09.324" endtime="20231130 16:37:09.324"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:09.325" level="INFO">${sessionName} = session_8165</msg>
+<status status="PASS" starttime="20231130 16:37:09.324" endtime="20231130 16:37:09.325"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:09.325" level="INFO">Creating Session using : alias=session_8165, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:09.325" endtime="20231130 16:37:09.325"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:09.323" endtime="20231130 16:37:09.325"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:09.328" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:09.327" endtime="20231130 16:37:09.328"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:09.328" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:09.736" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '262'} 
+ body=b'{\n    "userId": "2091266748",\n    "phoneNumber": "0178888888",\n    "name": "ahmed gebril",\n    "lessorId": "arb",\n    "actionId": 1,\n    "email": "agebril@gmail.com",\n    "policyNumber": "231654888",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": 1\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:09.736" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=400, reason=Bad Request 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:40 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body={"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":287,"errorMessage":"PhoneNumberIsInCoreectFormat"},"data":null}}} 
+ </msg>
+<msg timestamp="20231130 16:37:09.737" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:09.328" endtime="20231130 16:37:09.737"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:09.737" endtime="20231130 16:37:09.737"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:09.738" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":287,"errorMessage":"PhoneNumberIsInCoreectFormat"...</msg>
+<status status="PASS" starttime="20231130 16:37:09.738" endtime="20231130 16:37:09.738"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:09.739" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":287,"errorMessage":"PhoneNumberIsInCoreectFormat"...</msg>
+<status status="PASS" starttime="20231130 16:37:09.739" endtime="20231130 16:37:09.739"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:09.740" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":287,"errorMessage":"PhoneNumberIsInCoreectFormat"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:09.739" endtime="20231130 16:37:09.740"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:09.741" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":287,"errorMessage":"PhoneNumberIsInCoreectFormat"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:09.740" endtime="20231130 16:37:09.741"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:09.326" endtime="20231130 16:37:09.742"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:09.325" endtime="20231130 16:37:09.742"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:09.323" endtime="20231130 16:37:09.742"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:09.322" endtime="20231130 16:37:09.742" critical="yes"></status>
+</test>
+<test id="s1-s1-t10" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "2091266748",
+    "phoneNumber": "0578888888",
+    "name": "ahmed gebril",
+    "lessorId": "arb",
+    "actionId": 1,
+    "email": "osamah.dev@gmailcom",
+    "policyNumber": "231654888",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": 1
+}</arg>
+<arg>400</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:09.749" level="INFO">${randomNumber} = 2933</msg>
+<status status="PASS" starttime="20231130 16:37:09.748" endtime="20231130 16:37:09.749"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:09.749" level="INFO">${sessionName} = session_2933</msg>
+<status status="PASS" starttime="20231130 16:37:09.749" endtime="20231130 16:37:09.749"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:09.750" level="INFO">${sessionName} = session_2933</msg>
+<status status="PASS" starttime="20231130 16:37:09.750" endtime="20231130 16:37:09.751"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:09.752" level="INFO">Creating Session using : alias=session_2933, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:09.751" endtime="20231130 16:37:09.752"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:09.747" endtime="20231130 16:37:09.752"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:09.757" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:09.756" endtime="20231130 16:37:09.757"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:09.757" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:10.340" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '264'} 
+ body=b'{\n    "userId": "2091266748",\n    "phoneNumber": "0578888888",\n    "name": "ahmed gebril",\n    "lessorId": "arb",\n    "actionId": 1,\n    "email": "osamah.dev@gmailcom",\n    "policyNumber": "231654888",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": 1\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:10.341" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=400, reason=Bad Request 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:40 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body={"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":295,"errorMessage":"EmailAddressIsInCorrectFormat"},"data":null}}} 
+ </msg>
+<msg timestamp="20231130 16:37:10.341" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:09.757" endtime="20231130 16:37:10.341"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:10.342" endtime="20231130 16:37:10.342"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:10.343" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":295,"errorMessage":"EmailAddressIsInCorrectFormat...</msg>
+<status status="PASS" starttime="20231130 16:37:10.343" endtime="20231130 16:37:10.343"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:10.344" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":295,"errorMessage":"EmailAddressIsInCorrectFormat...</msg>
+<status status="PASS" starttime="20231130 16:37:10.343" endtime="20231130 16:37:10.344"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:10.344" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":295,"errorMessage":"EmailAddressIsInCorrectFormat"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:10.344" endtime="20231130 16:37:10.344"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:10.345" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":295,"errorMessage":"EmailAddressIsInCorrectFormat"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:10.344" endtime="20231130 16:37:10.345"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:09.754" endtime="20231130 16:37:10.345"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:09.752" endtime="20231130 16:37:10.345"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:09.746" endtime="20231130 16:37:10.345"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:09.744" endtime="20231130 16:37:10.346" critical="yes"></status>
+</test>
+<test id="s1-s1-t11" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "2091266748",
+    "phoneNumber": "0578888888",
+    "name": "ahmed gebril",
+    "lessorId": "arb",
+    "actionId": 3,
+    "email": "agebril@gmail.com",
+    "policyNumber": "231654888",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": null
+}</arg>
+<arg>200</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:10.349" level="INFO">${randomNumber} = 4906</msg>
+<status status="PASS" starttime="20231130 16:37:10.349" endtime="20231130 16:37:10.349"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:10.350" level="INFO">${sessionName} = session_4906</msg>
+<status status="PASS" starttime="20231130 16:37:10.350" endtime="20231130 16:37:10.350"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:10.351" level="INFO">${sessionName} = session_4906</msg>
+<status status="PASS" starttime="20231130 16:37:10.350" endtime="20231130 16:37:10.351"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:10.351" level="INFO">Creating Session using : alias=session_4906, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:10.351" endtime="20231130 16:37:10.352"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:10.348" endtime="20231130 16:37:10.352"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:10.354" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:10.353" endtime="20231130 16:37:10.354"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:10.354" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:11.060" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '265'} 
+ body=b'{\n    "userId": "2091266748",\n    "phoneNumber": "0578888888",\n    "name": "ahmed gebril",\n    "lessorId": "arb",\n    "actionId": 3,\n    "email": "agebril@gmail.com",\n    "policyNumber": "231654888",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": null\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:11.061" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:41 GMT', 'Content-Type': 'text/plain; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body=http://claims-qc.rasan.co/app?auth_code=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZCI6IjEiLCJJc0FkbWluIjoidHJ1ZSIsImVtYWlsIjoiYWdlYnJpbEBnbWFpbC5jb20iLCJQb2xpY3lOdW1iZXIiOiIyMzE2NTQ4ODgiLCJJbnN1cmFuY2VDb21wYW55SWQiOiIiLCJMZXNzb3JJZCI6ImFyYiIsIkNsYWltTm8iOiJDSUQtOTg3NzczLTIzOCIsIkFjdGlvbklkIjoiMyIsIm5iZiI6MTcwMTM1NTEyMSwiZXhwIjoxNzAxMzU1NDIxLCJpYXQiOjE3MDEzNTUxMjF9.gcbn1BwD7l3v8rNUNCPLqgBoPLitSDKGmQi0UYLMzTw 
+ </msg>
+<msg timestamp="20231130 16:37:11.061" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:10.354" endtime="20231130 16:37:11.061"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:11.061" endtime="20231130 16:37:11.062"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:11.063" level="INFO">${actualResult} = http://claims-qc.rasan.co/app?auth_code=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZCI6IjEiLCJJc0F...</msg>
+<status status="PASS" starttime="20231130 16:37:11.062" endtime="20231130 16:37:11.063"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:11.063" level="INFO">${actualResult} = http://claims-qc.rasan.co/app?auth_code=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZCI6IjEiLCJJc0F...</msg>
+<status status="PASS" starttime="20231130 16:37:11.063" endtime="20231130 16:37:11.063"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:11.064" level="INFO">${AuthCode} = I1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZCI6IjEiLCJJc0FkbWluIjoidHJ1ZSIsImVtYWlsIjoiYWdlYnJpbEBnbWFpbC5jb20iL...</msg>
+<status status="PASS" starttime="20231130 16:37:11.063" endtime="20231130 16:37:11.064"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:11.064" level="INFO">${AuthCode} = I1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZCI6IjEiLCJJc0FkbWluIjoidHJ1ZSIsImVtYWlsIjoiYWdlYnJpbEBnbWFpbC5jb20iL...</msg>
+<status status="PASS" starttime="20231130 16:37:11.064" endtime="20231130 16:37:11.064"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:10.353" endtime="20231130 16:37:11.064"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:10.352" endtime="20231130 16:37:11.064"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:10.348" endtime="20231130 16:37:11.065"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:10.347" endtime="20231130 16:37:11.065" critical="yes"></status>
+</test>
+<test id="s1-s1-t12" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "2091266748",
+    "phoneNumber": "0578888888",
+    "name": "ahmed gebril",
+    "lessorId": "arb",
+    "actionId": 1,
+    "email": "",
+    "policyNumber": "231654888",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": 1
+}</arg>
+<arg>200</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:11.068" level="INFO">${randomNumber} = 6434</msg>
+<status status="PASS" starttime="20231130 16:37:11.067" endtime="20231130 16:37:11.068"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:11.068" level="INFO">${sessionName} = session_6434</msg>
+<status status="PASS" starttime="20231130 16:37:11.068" endtime="20231130 16:37:11.068"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:11.068" level="INFO">${sessionName} = session_6434</msg>
+<status status="PASS" starttime="20231130 16:37:11.068" endtime="20231130 16:37:11.068"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:11.069" level="INFO">Creating Session using : alias=session_6434, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:11.069" endtime="20231130 16:37:11.069"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:11.067" endtime="20231130 16:37:11.069"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:11.071" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:11.070" endtime="20231130 16:37:11.071"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:11.071" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:12.299" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '245'} 
+ body=b'{\n    "userId": "2091266748",\n    "phoneNumber": "0578888888",\n    "name": "ahmed gebril",\n    "lessorId": "arb",\n    "actionId": 1,\n    "email": "",\n    "policyNumber": "231654888",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": 1\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:12.299" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:42 GMT', 'Content-Type': 'text/plain; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body=http://claims-qc.rasan.co/app/claim/create?auth_code=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZCI6IjEiLCJJc0FkbWluIjoidHJ1ZSIsImVtYWlsIjoiIiwiUG9saWN5TnVtYmVyIjoiMjMxNjU0ODg4IiwiSW5zdXJhbmNlQ29tcGFueUlkIjoiMSIsIkxlc3NvcklkIjoiYXJiIiwiQ2xhaW1ObyI6IkNJRC05ODc3NzMtMjM4IiwiQWN0aW9uSWQiOiIxIiwibmJmIjoxNzAxMzU1MTIyLCJleHAiOjE3MDEzNTU0MjIsImlhdCI6MTcwMTM1NTEyMn0.AoyzsvHjoQHGwOpcGPlWv-Qbrt-W4bfHJmzlBkKgkvI 
+ </msg>
+<msg timestamp="20231130 16:37:12.299" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:11.071" endtime="20231130 16:37:12.299"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:12.300" endtime="20231130 16:37:12.300"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:12.301" level="INFO">${actualResult} = http://claims-qc.rasan.co/app/claim/create?auth_code=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZC...</msg>
+<status status="PASS" starttime="20231130 16:37:12.300" endtime="20231130 16:37:12.301"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:12.301" level="INFO">${actualResult} = http://claims-qc.rasan.co/app/claim/create?auth_code=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZC...</msg>
+<status status="PASS" starttime="20231130 16:37:12.301" endtime="20231130 16:37:12.301"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:12.302" level="INFO">${AuthCode} = yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZCI6IjEiLCJJc0FkbWluIjoidHJ1ZSIsImVtYWlsIjoiIiwiUG9saWN5...</msg>
+<status status="PASS" starttime="20231130 16:37:12.302" endtime="20231130 16:37:12.302"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:12.302" level="INFO">${AuthCode} = yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWhtZWQgZ2VicmlsIiwiVXNlcklkIjoiMjA5MTI2Njc0OCIsIlBob25lTnVtYmVyIjoiMDU3ODg4ODg4OCIsIkNoYW5uZWxJZCI6IjEiLCJJc0FkbWluIjoidHJ1ZSIsImVtYWlsIjoiIiwiUG9saWN5...</msg>
+<status status="PASS" starttime="20231130 16:37:12.302" endtime="20231130 16:37:12.303"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:11.070" endtime="20231130 16:37:12.303"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:11.069" endtime="20231130 16:37:12.303"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:11.067" endtime="20231130 16:37:12.303"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:11.065" endtime="20231130 16:37:12.303" critical="yes"></status>
+</test>
+<test id="s1-s1-t13" name="verify get auth code">
+<kw name="Generate_Auth_Code">
+<arguments>
+<arg>http://claimsapi-qc.rasan.co</arg>
+<arg>/Auth/Token</arg>
+<arg>{
+    "userId": "2091266748",
+    "phoneNumber": "0578888888",
+    "name": "ahmed gebril",
+    "lessorId": "arb",
+    "actionId": 1,
+    "email": "agebril@gmail.com",
+    "policyNumber": "231654888",
+    "claimNo": "CID-987773-238",
+    "insuranceCompanyId": null
+}</arg>
+<arg>400</arg>
+</arguments>
+<kw name="Create API session" library="API_Preferences">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomNumber}</var>
+</assign>
+<msg timestamp="20231130 16:37:12.307" level="INFO">${randomNumber} = 3502</msg>
+<status status="PASS" starttime="20231130 16:37:12.306" endtime="20231130 16:37:12.307"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>session_${randomNumber}</arg>
+</arguments>
+<assign>
+<var>${sessionName}</var>
+</assign>
+<msg timestamp="20231130 16:37:12.307" level="INFO">${sessionName} = session_3502</msg>
+<status status="PASS" starttime="20231130 16:37:12.307" endtime="20231130 16:37:12.307"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:12.308" level="INFO">${sessionName} = session_3502</msg>
+<status status="PASS" starttime="20231130 16:37:12.308" endtime="20231130 16:37:12.308"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Base_Url}</arg>
+<arg>timeout=30</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20231130 16:37:12.309" level="INFO">Creating Session using : alias=session_3502, url=http://claimsapi-qc.rasan.co, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231130 16:37:12.308" endtime="20231130 16:37:12.310"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:12.305" endtime="20231130 16:37:12.310"></status>
+</kw>
+<kw name="Post Request to get auth code" library="API_Preferences">
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Post Request using data Driven Structure with Bearer Token" library="API_Preferences">
+<doc>Post request with DataDriven structure and Bearer token</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${Url}</arg>
+<arg>${body}</arg>
+<arg>${StatusCode}</arg>
+<arg>${actual}</arg>
+<arg>${Expected}</arg>
+<arg>${RandomData}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=Bearer 123456789</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20231130 16:37:12.313" level="INFO">${headers} = {'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20231130 16:37:12.312" endtime="20231130 16:37:12.313"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<arguments>
+<arg>${sessionName}</arg>
+<arg>${URI}</arg>
+<arg>${data}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=10</arg>
+<arg>allow_redirects=${false}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20231130 16:37:12.313" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:14.054" level="INFO">POST Request : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ path_url=/Auth/Token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer 123456789', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '265'} 
+ body=b'{\n    "userId": "2091266748",\n    "phoneNumber": "0578888888",\n    "name": "ahmed gebril",\n    "lessorId": "arb",\n    "actionId": 1,\n    "email": "agebril@gmail.com",\n    "policyNumber": "231654888",\n    "claimNo": "CID-987773-238",\n    "insuranceCompanyId": null\n}' 
+ </msg>
+<msg timestamp="20231130 16:37:14.054" level="INFO">POST Response : url=http://claimsapi-qc.rasan.co/Auth/Token 
+ status=400, reason=Bad Request 
+ headers={'Server': 'nginx/1.25.1', 'Date': 'Thu, 30 Nov 2023 14:38:44 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'} 
+ body={"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":233,"errorMessage":"EnterInsuranceCompanyId"},"data":null}}} 
+ </msg>
+<msg timestamp="20231130 16:37:14.055" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20231130 16:37:12.313" endtime="20231130 16:37:14.055"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${statuscode}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20231130 16:37:14.055" endtime="20231130 16:37:14.056"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${resp.content}</arg>
+</arguments>
+<assign>
+<var>${actualResult}</var>
+</assign>
+<msg timestamp="20231130 16:37:14.056" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":233,"errorMessage":"EnterInsuranceCompanyId"},"da...</msg>
+<status status="PASS" starttime="20231130 16:37:14.056" endtime="20231130 16:37:14.056"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:14.057" level="INFO">${actualResult} = {"model":{"is_succeeded":false,"method_name":"Handle","status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":233,"errorMessage":"EnterInsuranceCompanyId"},"da...</msg>
+<status status="PASS" starttime="20231130 16:37:14.056" endtime="20231130 16:37:14.057"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${actualResult}</arg>
+<arg>54</arg>
+</arguments>
+<assign>
+<var>${AuthCode}</var>
+</assign>
+<msg timestamp="20231130 16:37:14.058" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":233,"errorMessage":"EnterInsuranceCompanyId"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:14.058" endtime="20231130 16:37:14.058"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${AuthCode}</arg>
+</arguments>
+<msg timestamp="20231130 16:37:14.059" level="INFO">${AuthCode} = "status":{"code":2,"message":"Failed"},"exception":null,"data":{"apiErrorOutputDTO":{"errorCode":233,"errorMessage":"EnterInsuranceCompanyId"},"data":null}}}</msg>
+<status status="PASS" starttime="20231130 16:37:14.058" endtime="20231130 16:37:14.059"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:12.311" endtime="20231130 16:37:14.059"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:12.310" endtime="20231130 16:37:14.059"></status>
+</kw>
+<status status="PASS" starttime="20231130 16:37:12.305" endtime="20231130 16:37:14.059"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20231130 16:37:12.304" endtime="20231130 16:37:14.059" critical="yes"></status>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20231130 16:37:02.586" endtime="20231130 16:37:14.060"></status>
+</suite>
+<status status="PASS" starttime="20231130 16:37:02.565" endtime="20231130 16:37:14.065"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="13" fail="0">Critical Tests</stat>
+<stat pass="13" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="13" fail="0">regression</stat>
+<stat pass="13" fail="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="13" fail="0" id="s1" name="Suites">Suites</stat>
+<stat pass="13" fail="0" id="s1-s1" name="GetAuthCode">Suites.GetAuthCode</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231130 16:37:04.612" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:05.212" level="WARN">Multiple test cases with name 'verify get auth code' executed in test suite 'Suites.GetAuthCode'.</msg>
+<msg timestamp="20231130 16:37:05.223" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:05.805" level="WARN">Multiple test cases with name 'verify get auth code' executed in test suite 'Suites.GetAuthCode'.</msg>
+<msg timestamp="20231130 16:37:05.820" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:06.453" level="WARN">Multiple test cases with name 'verify get auth code' executed in test suite 'Suites.GetAuthCode'.</msg>
+<msg timestamp="20231130 16:37:06.459" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:07.037" level="WARN">Multiple test cases with name 'verify get auth code' executed in test suite 'Suites.GetAuthCode'.</msg>
+<msg timestamp="20231130 16:37:07.051" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:07.655" level="WARN">Multiple test cases with name 'verify get auth code' executed in test suite 'Suites.GetAuthCode'.</msg>
+<msg timestamp="20231130 16:37:07.669" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:08.248" level="WARN">Multiple test cases with name 'verify get auth code' executed in test suite 'Suites.GetAuthCode'.</msg>
+<msg timestamp="20231130 16:37:08.258" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:08.730" level="WARN">Multiple test cases with name 'verify get auth code' executed in test suite 'Suites.GetAuthCode'.</msg>
+<msg timestamp="20231130 16:37:08.740" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:09.322" level="WARN">Multiple test cases with name 'verify get auth code' executed in test suite 'Suites.GetAuthCode'.</msg>
+<msg timestamp="20231130 16:37:09.328" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:09.743" level="WARN">Multiple test cases with name 'verify get auth code' executed in test suite 'Suites.GetAuthCode'.</msg>
+<msg timestamp="20231130 16:37:09.757" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:10.346" level="WARN">Multiple test cases with name 'verify get auth code' executed in test suite 'Suites.GetAuthCode'.</msg>
+<msg timestamp="20231130 16:37:10.354" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:11.065" level="WARN">Multiple test cases with name 'verify get auth code' executed in test suite 'Suites.GetAuthCode'.</msg>
+<msg timestamp="20231130 16:37:11.071" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20231130 16:37:12.304" level="WARN">Multiple test cases with name 'verify get auth code' executed in test suite 'Suites.GetAuthCode'.</msg>
+<msg timestamp="20231130 16:37:12.313" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+</errors>
+</robot>

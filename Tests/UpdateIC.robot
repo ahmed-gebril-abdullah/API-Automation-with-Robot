@@ -22,7 +22,8 @@ Update_IC
 
 
 
-*** Test Cases ***
-${Testcase id} ${Type} ${Desc}
+*** Test Cases ***         ${URL}       ${URI}     ${body}    ${StatusCode}   ${actual}     ${Expected}    ${RandomData}
+
+verify update IC     [Tags]    smoke    regression
 
 

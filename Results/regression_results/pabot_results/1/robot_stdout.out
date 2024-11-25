@@ -1,0 +1,5940 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.ClaimSub2 :: Suite description                                         
+==============================================================================
+Integrated-Enter Lessee Arabic Third Name AS AR                         
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee Arabic Third Name AS AR    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "String",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "عبدالله",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_2332 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_2332 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee Arabic Last Name  AS blank                    | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Lessee Arabic Last Name AS EN                          
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee Arabic Last Name AS EN    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "String",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "abdallah",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_5496 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_5496 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee Arabic Last Name AS AR                          
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee Arabic Last Name AS AR    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "String",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "عبدالله",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_0250 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_0250 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English  Full Name AS blank                   | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English Full Name AS EN                         
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee English Full Name AS EN    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "Abdallah",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_5095 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_5095 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English Full Name AS AR                         
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee English Full Name AS AR    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "عبدالله",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "عبدالله",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_0090 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_0090 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English First Name AS blank                   | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English First Name AS EN                        
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee English First Name AS EN    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "Abdallah",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "String",
+    "firstName": "String",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_1971 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_1971 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English First Name AS AR                        
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee English First Name AS AR    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "String",
+    "firstName": "String",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "عبدالله",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_0361 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_0361 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English Second Name  AS blank                 | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English Second Name AS EN                       
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee English Second Name AS EN    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "String",
+    "firstName": "string",
+    "secondName": "String",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "abdallah",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_7304 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_7304 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English Second Name AS AR                       
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee English Second Name AS AR    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "String",
+    "firstName": "string",
+    "secondName": "String",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "عبدالله",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_8723 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_8723 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English Third Name  AS blank                  | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English Third Name AS EN                        
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee English Third Name AS EN    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "String",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "String",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "abdallah",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_3326 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_3326 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English Third Name AS AR                        
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee English Third Name AS AR    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "String",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "String",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "عبدالله",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_6299 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_6299 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English Last Name  AS blank                   | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English Last Name AS EN                         
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee English Last Name AS EN    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "String",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "String",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "abdallah",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_1638 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_1638 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee English Last Name AS AR                         
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Lessee English Last Name AS AR    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "String",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "String",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "‘عبدالله",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_1577 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_1577 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated- Enter Social Status as valid int                            
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated- Enter Social Status as valid int    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "abdallah",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_4483 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_4483 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated- Enter Social Status as blank                              | PASS |
+------------------------------------------------------------------------------
+Integrated- Enter Social Status as string                             | PASS |
+------------------------------------------------------------------------------
+Integrated- Enter gender as valid int                                   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated- Enter gender as valid int    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "abdallah",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_9213 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_9213 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated- Enter gender as blank                                     | PASS |
+------------------------------------------------------------------------------
+Integrated- Enter gender as string                                    | PASS |
+------------------------------------------------------------------------------
+Post -Enter Lessee nationality ID code as int                           
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Post -Enter Lessee nationality ID code as int    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "abdallah",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId":1 ,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_0794 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_0794 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+post -Enter Lessee nationality ID  code as String                     | PASS |
+------------------------------------------------------------------------------
+post -Enter Lessee nationality ID  code as blank                      | PASS |
+------------------------------------------------------------------------------
+post -Enter Lessee nationality ID code as equal zero                  | PASS |
+------------------------------------------------------------------------------
+Post-Enter Lessee date Of Birth valid formate                           
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Post-Enter Lessee date Of Birth valid formate    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "abdallah",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId":1 ,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_0216 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_0216 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Lessee date Of Birth invalid formate                 | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Lessee date Of Birth blank                           | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Lessee date Of Birth future date                     | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Lessee date Of Birth string                          | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter valid lesse address                                    
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter valid lesse address    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "abdallah",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId":1 ,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "123-Address",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_8475 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_8475 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter valid lesse address as blank                         | PASS |
+------------------------------------------------------------------------------
+Post-Enter Valid mobile number                                          
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Post-Enter Valid mobile number    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "abdallah",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId":1 ,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "123-Address",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_2424 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_2424 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter invalid mobile number                                | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter mobile number as string                              | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter mobile number blank                                  | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Valid email format                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Valid email format    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "abdallah",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId":1 ,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "123-Address",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_7599 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_7599 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter invalid email formate                                | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter  email as blank                                      | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter lessee Occupation Id with valid data                   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter lessee Occupation Id with valid data    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "abdallah",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId":1 ,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "123-Address",
+    "mobilenumber": "0512345678",
+    "emailAddress": "aa@aa.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_5703 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_5703 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter lessee Occupation Id with invalid data               | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter lessee Occupation Id as blank                        | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter lessee Occupation as string                          | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Driver ID as int                                       
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Driver ID as int    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "string",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_6213 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_6213 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Driver id as string                                  | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Driver ID blank                                      | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Driver english Full name EN                            
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Driver english Full name EN     
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "String",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "Abdallah",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_7656 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_7656 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Driver english Full name AR                            
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Driver english Full name AR    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "String",
+      "firstName": "string",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "عبدالله",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_3201 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_3201 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Driver english Full name Blank                       | PASS |
+------------------------------------------------------------------------------
+Integrated-Enter Driver english First name EN                           
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Driver english First name EN    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "abdallah",
+      "firstName": "abdallah",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "Abdallah",
+      "firstNameEn": "string",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_2599 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_2599 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Driver english First name AR                           
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:28
+    T:  Integrated-Enter Driver english First name AR    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Create_Integrated_Claim    http://claimsapi-qc.rasan.co    /api/Claim/Create    {
+  "isLessor": true,
+  "referenceTypeId": 1,
+  "channelId": 1,
+  "submitedBy": "string",
+  "customerIBANNo": "string",
+  "customerIBANBank": "string",
+  "vehiclePickupLocationLatitude": "string",
+  "vehiclePickupLocationLongitude": "string",
+  "vehiclePickupLocationAddress": "string",
+  "ClaimDescription":"desc",
+  "cityId": 1,
+  "taqdeerReportNo": "string",
+  "accidentReportNo": "string",
+  "authorityId": 1,
+  "policyData": {
+    "insuranceCompanyId": 5,
+    "policyNumber": "string",
+    "annualDepreciationVehicle": "string",
+    "rateAndPremium": 0,
+    "deductible": 0,
+    "percentageTotalLost": 0,
+    "sumInsured": 0,
+    "repairMethod": "string",
+    "coverageFrom": "12-12-2005",
+    "coverageTo": "12-12-2006",
+    "featureId": 1,
+    "featureTypeId": 1,
+    "featureAmount": 0,
+    "featureTaxableAmount": 0
+  },
+  "driverData": [
+    {
+      "nationalNumber": "1234567891",
+      "fullName": "String",
+      "firstName": "String",
+      "secondName": "string",
+      "thirdName": "string",
+      "lastName": "string",
+      "fullNameEn": "string",
+      "firstNameEn": "عبدالله",
+      "secondNameEn": "string",
+      "thirdNameEn": "string",
+      "lastNameEn": "string",
+      "relationId": null,
+      "nationalityId": null,
+      "ispolicyHolder": true,
+      "isUser": true,
+      "usagePercentage": 0,
+      "driverDateofBirth": "12-12-1990",
+      "genderId": null,
+      "educationId": null,
+      "driverProfession": "string",
+      "maritalStatusId": null,
+      "workCityId": null,
+      "licenseTypeId": null,
+      "licenseOwnYears": 0,
+      "ncdRefrence": "string",
+      "accidentsNo": 0,
+      "claimsNo": 0,
+      "ncdCodeId": null,
+      "trafficViolationId": null,
+      "healthConditionId": null,
+      "driverCountryLicence": [
+        {
+          "countryId": 1
+        }
+      ],
+      "driverAccidentLicence": [
+        {
+          "accidentDetail": "string"
+        }
+      ]
+    }
+  ],
+  "accidentData": {
+    "attendedId": 1,
+    "accidentDate": "",
+    "fullName": "string",
+    "nationalNumer": "string",
+    "licenseNumber": "string",
+    "licenseExpiryDate": "",
+    "liability": 0,
+    "vehicleDamageAreaPhoto": ".png",
+    "accidentDescription": "string",
+    "accidentDrawing": ".png",
+    "taqdeerCenterName": "string",
+    "taqdeerCenterCityId": null,
+    "taqdeerDate": "12-12-2005",
+    "taqdeerCompletedDate": "12-12-2006",
+    "estimatedBy": "string",
+    "estimationCost": 0,
+    "estimationCostVAT": 0,
+    "sparePartsCost": 0,
+    "sparePartsCostVAT": 0,
+    "totalCost": 0,
+    "totalCostincludingVAT": 0,
+    "accidentComment": "string",
+    "paymentMethodId": null,
+    "paymentBy": "string",
+    "sparePartDealer": "string",
+    "overallDiscount": 0,
+    "sparePartsCostAfterDiscount": 0,
+    "sparepartsVatAfterDiscount": 0,
+    "sparePartFinalvaluewithVAT": 0
+  },
+  "accidentSparePart": [
+    {
+      "sparePartName": "string",
+      "sparePartCode": "string",
+      "quantity": 0,
+      "unitprice": 0,
+      "total": 0,
+      "discount": 0,
+      "consumption": 0,
+      "finalTotal": 0
+    }
+  ],
+"policyHolder": {
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "commercialRegistrationNo": "string",
+    "holderNumber": "string",
+    "holderExpiryDate": "12-12-2005",
+    "phonenumber": "0512345678",
+    "nationalAddress": "iiii",
+    "emailAddress": "jhjhjhj@wwwww.com",
+    "policyHolderOccupationId": null
+},
+   "vehicleData": {
+    "plateNumber": "234",
+    "firstPlateLetterId": 1,
+    "secondPlateLetterId": 1,
+    "thirdPlateLetterId": 1,
+    "plateTypeId": 1,
+    "registrationNumber": "ssss",
+    "registrationExpiryDate": "12-12-2005",
+    "capacityId": 1,
+    "bodyCodeId": 1,
+    "makeId": 1,
+    "modelId": 1,
+    "manufacureYear": 1,
+    "colorId": 1,
+    "chassisTypeId": 1,
+    "chassisNumber": "sss",
+    "sequenceNumber": "xx"
+  },
+ "lesseeData": {
+    "nationalNumber": "1234567891",
+    "nationalNumberExpiryDate": "02-12-2008",
+    "fullName": "string",
+    "firstName": "string",
+    "secondName": "string",
+    "thirdName": "string",
+    "lastName": "string",
+    "fullNameEn": "string",
+    "firstNameEn": "string",
+    "secondNameEn": "string",
+    "thirdNameEn": "string",
+    "lastNameEn": "string",
+    "socialStatusId": 1,
+    "genderId": 1,
+    "nationalityID": 1,
+    "dateOfBirth": "12-12-1990",
+    "nationalAddress": "string",
+    "mobilenumber": "0512345678",
+    "emailAddress": "hhh@www.com",
+    "lesseeOccupationId": 1
+  },
+  "attachementFiles": [
+    {
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    },
+{
+      "filePath": ".png"
+    }
+
+  ]
+}    200    ["model"]["data"]["apiErrorOutputDTO"]["errorCode"]    1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\ClaimSub2.robot:0
+      Post Request claim    ${sessionName}    ${URI}    ${body}    ${StatusCode}    ${actual}    ${Expected}    ${RandomData}
+      |  ${sessionName} = session_6222 (str)
+      |  ${URI} = /api/Claim/Create (str)
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+      |  ${actual} = <Unable to define variable value>
+      |  ${Expected} = <Unable to define variable value>
+      |  ${RandomData} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Post Request using data Driven Structure    ${sessionName}    ${Url}    ${body}    ${StatusCode}
+      |  ${sessionName} = session_6222 (str)
+      |  ${Url} = <Unable to define variable value>
+      |  ${body} = <Unable to define variable value>
+      |  ${StatusCode} = 200 (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Resources\Objects\API_Preferences.robot:0
+      Status Should Be    ${statuscode}    ${resp}
+      |  ${statuscode} = 200 (str)
+      |  ${resp} = <Response [500]> (Response)
+______________________________________________________________________________
+| FAIL |
+Url: http://claimsapi-qc.rasan.co/api/Claim/Create Expected status: 500 != 200
+------------------------------------------------------------------------------
+Integrated-Enter Driver english First name Blank                      

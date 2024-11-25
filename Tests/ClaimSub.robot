@@ -7,9 +7,8 @@ Library     Collections
 Library     String
 Library     JSONLibrary
 Library     DataDriver    ../Resources/DataDriven/ClaimSubmission.xlsx    sheet_name=ClaimSubmission
-Resource       ../Resources/Keyword/CliamSub.robot
 Resource       ../Resources/Objects/API_Preferences.robot
-#Resource       ../Resources/Keyword/Common_Keywords.robot
+
 
 Test Template     Create_Claim
 
@@ -22,7 +21,8 @@ Create_Claim
 
 
 
-*** Test Cases ***
-${Testcase id} ${Type} ${Desc}
+*** Test Cases ***         ${URL}       ${URI}     ${body}    ${StatusCode}   ${actual}     ${Expected}    ${RandomData}
+
+verify create claim     [Tags]    smoke    regression
 
 

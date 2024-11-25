@@ -24,7 +24,7 @@ Get_All_Claims
 
 
 
-*** Test Cases ***
-${Testcase id} ${Type} ${Desc}
+*** Test Cases ***         ${URL}       ${URI}     ${body}    ${StatusCode}   ${actual}     ${Expected}    ${RandomData}
+verify get claims     [Tags]    smoke    regression
 
 

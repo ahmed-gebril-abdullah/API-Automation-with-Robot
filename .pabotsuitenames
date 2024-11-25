@@ -1,0 +1,12 @@
+datasources:f48d50aee65fb4e02ea72ec5eb75b2af6e650e1b
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:accea663420b9e1c7bd9b474eb8807058c067f83
+--suite Suites.ClaimIntegratedSub
+--suite Suites.ClaimSub
+--suite Suites.CreateIC
+--suite Suites.GetAllClaims
+--suite Suites.GetClaimStatus
+--suite Suites.UpdateClaim
+--suite Suites.UpdateIC
+--suite Suites.UpdateIntegratedClaim
