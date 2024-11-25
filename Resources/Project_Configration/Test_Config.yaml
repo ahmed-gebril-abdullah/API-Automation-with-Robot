@@ -1,8 +1,8 @@
 Base_Url: http://claimsapi-qc.rasan.co/
 
-DBName: ClaimDB_QC
-DBUser: agebril
-DBPass: S+z77lbo722
-DBHost: 172.30.40.122
-DBPort: 1433
+DBName: ******
+DBUser: ******
+DBPass: ******
+DBHost: 172.**.**.***
+DBPort: ****
 
