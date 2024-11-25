@@ -1,6 +1,0 @@
-[ ERROR ] Error in file 'C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\GetClaimStatus.robot' on line 10: Resource file '..\Resources\Keyword\CliamSub.robot' does not exist.
-[ ERROR ] [ DataDriver ] Error in robot file:
-  File "C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\GetClaimStatus.robot", line 0
-[ ERROR ] In source file:
-  File "../Resources/DataDriven/GetClaimStatus.xlsx", line 0
-[ ERROR ] Calling method '_start_suite' of listener 'DataDriver' failed: FileNotFoundError: File attribute was not a full path. Tried to find C:\Users\AGebril\PycharmProjects\QC_Automation_Claim\Tests\../Resources/DataDriven/GetClaimStatus.xlsx but file does not exist.
